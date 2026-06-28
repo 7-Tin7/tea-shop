@@ -41,9 +41,9 @@ input,textarea{-webkit-appearance:none;appearance:none;border-radius:0}
 .banner-slide::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.35))}
 .banner-slide span{position:relative;z-index:1}
 /* 占位图 - 替换为实际图片时改为 background-image */
-.banner-slide:nth-child(1){background-image:url('images/banner1.jpg');background-size:cover;background-position:center}
-.banner-slide:nth-child(2){background-image:url('images/banner2.jpg');background-size:cover;background-position:center}
-.banner-slide:nth-child(3){background-image:url('images/banner3.jpg');background-position:center;background-size:cover}
+.banner-slide:nth-child(1){background-image:url('https://cdn.jsdelivr.net/gh/7-Tin7/tea-shop@main/images/banner1.jpg');background-size:cover;background-position:center}
+.banner-slide:nth-child(2){background-image:url('https://cdn.jsdelivr.net/gh/7-Tin7/tea-shop@main/images/banner2.jpg');background-size:cover;background-position:center}
+.banner-slide:nth-child(3){background-image:url('https://cdn.jsdelivr.net/gh/7-Tin7/tea-shop@main/images/banner3.jpg');background-position:center;background-size:cover}
 .banner-dots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:2}
 .banner-dots .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);transition:.3s}
 .banner-dots .dot.active{background:#fff;width:20px;border-radius:4px}
@@ -315,7 +315,7 @@ input,textarea{-webkit-appearance:none;appearance:none;border-radius:0}
   <div class="contact-card">
     <h3>💬 客服微信</h3>
     <div class="qr-placeholder" style="background:none">
-      <img src="images/qrcode.jpg" alt="客服微信二维码" style="width:160px;height:160px;margin:0 auto;border-radius:8px;display:block;object-fit:cover">
+      <img src="https://cdn.jsdelivr.net/gh/7-Tin7/tea-shop@main/images/qrcode.jpg" alt="客服微信二维码" style="width:160px;height:160px;margin:0 auto;border-radius:8px;display:block;object-fit:cover">
     </div>
     <!-- 替换：<img src="qrcode.jpg" alt="客服微信" style="width:160px;height:160px;margin:16px auto"> -->
     <div class="wx-id" id="wxId">yiyegingming2024</div>
@@ -572,7 +572,7 @@ function productCardHTML(p) {
   return `
     <div class="product-card" onclick="openDetail(${p.id})">
       <div class="card-img" style="background:none">
-        <img src="images/product-${p.id}.jpg" alt="${p.name}" onerror="this.style.display='none';this.parentElement.style.background='#E8E0D5';this.parentElement.innerHTML='<span style=color:#999;font-size:13px>'+this.alt+'</span>'">
+        <img src="https://cdn.jsdelivr.net/gh/7-Tin7/tea-shop@main/images/product-${p.id}.jpg" alt="${p.name}" onerror="this.style.display='none';this.parentElement.style.background='#E8E0D5';this.parentElement.innerHTML='<span style=color:#999;font-size:13px>'+this.alt+'</span>'">
       </div>
       <div class="card-info">
         <div class="card-name">${p.name}</div>
@@ -614,7 +614,7 @@ function openDetail(id) {
   if (!p) return;
 
   // 详情图
-  $('#detailImage').innerHTML = `<img src="images/detail-${id}-${id}.jpg" alt="${p.name}" onerror="this.style.display='none'">`;
+  $('#detailImage').innerHTML = `<img src="https://cdn.jsdelivr.net/gh/7-Tin7/tea-shop@main/images/detail-${id}-${id}.jpg" alt="${p.name}" onerror="this.style.display='none'">`;
 
   $('#detailName').textContent = p.name;
   const specs = SPECS[id] || SPECS.default;
@@ -730,7 +730,7 @@ function renderCart() {
     const price = p.price + spec.price;
     return `
       <div class="cart-item">
-        <div class="ci-img" style="background:none"><img src="images/product-${p.id}.jpg" alt="${p.name}" onerror="this.style.display='none'"></div>
+        <div class="ci-img" style="background:none"><img src="https://cdn.jsdelivr.net/gh/7-Tin7/tea-shop@main/images/product-${p.id}.jpg" alt="${p.name}" onerror="this.style.display='none'"></div>
         <div class="ci-info">
           <div class="ci-name">${p.name}</div>
           <div class="ci-spec">${spec.label}</div>
