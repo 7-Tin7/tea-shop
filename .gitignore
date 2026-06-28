@@ -1,0 +1,5 @@
+# images
+*.psd
+*.sketch
+.DS_Store
+Thumbs.db
